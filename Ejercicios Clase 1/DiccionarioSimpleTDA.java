@@ -25,5 +25,5 @@ public interface DiccionarioSimpleTDA {
     /** @tarea claves devueve el conjunto de claves del diccionario.
      * @Precondicion el diccionario debe estar inicializado
      */
-    int claves();
+    conjunto claves();
 }
