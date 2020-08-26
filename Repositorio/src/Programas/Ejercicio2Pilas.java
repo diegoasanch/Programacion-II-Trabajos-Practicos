@@ -1,18 +1,18 @@
 package Programas;
 
 import Interfaces.PilaTDA;
-import Metodos.Metodos_pilas;
+import Metodos.MetodosPilas;
 import Implementaciones.PilaTopeIni;
 
 import java.util.Scanner;
 
-class Ejercicio_2_pilas {
+class Ejercicio2Pilas {
     public static void main(String[] args) {
         PilaTDA pila1 = new PilaTopeIni();
         PilaTDA pila2 = new PilaTopeIni();
 
         // Cargamos los metodos de pilas
-        Metodos_pilas pilas = new Metodos_pilas();
+        MetodosPilas pilas = new MetodosPilas();
 
         pila1.inicializarPila();
         pila2.inicializarPila();
@@ -28,6 +28,7 @@ class Ejercicio_2_pilas {
 
         Scanner teclado = new Scanner(System.in);
         int opcion = teclado.nextInt();
+        teclado.close();
 
         switch(opcion) {
             case 1:

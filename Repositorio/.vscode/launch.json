@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ejercicio_2_pilas<Repositorio_a1fdd464>",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio_2_pilas",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ejercicio_3<Repositorio_a1fdd464>",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio_3",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ejercicio_4<Repositorio_a1fdd464>",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio_4",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Ejercicio_5_colas<Repositorio_a1fdd464>",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio_5_colas",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-prueba_impresion<Repositorio_a1fdd464>",
+            "request": "launch",
+            "mainClass": "Programas.prueba_impresion",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-pruebas_colas<Repositorio_a1fdd464>",
+            "request": "launch",
+            "mainClass": "Programas.pruebas_colas",
+            "projectName": "Repositorio_a1fdd464"
+        }
+    ]
+}

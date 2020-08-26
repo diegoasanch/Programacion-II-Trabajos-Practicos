@@ -2,15 +2,15 @@ package Programas;
 
 import Interfaces.ColaTDA;
 import Implementaciones.ColaCircular;
-import Metodos.Metodos_colas;
+import Metodos.MetodosColas;
 
-class Ejercicio_5_colas {
+class Ejercicio5Colas {
     public static void main(String[] args) {
         
         ColaTDA cola = new ColaCircular();
         cola.inicializarCola();
 
-        Metodos_colas metodos = new Metodos_colas();
+        MetodosColas metodos = new MetodosColas();
 
         metodos.cargaCola(cola);
 
