@@ -71,4 +71,27 @@ public class MetodosColasPrioridad {
         }
     }
 
+    /** @tarea copiaCola copia a cola2 el contenido de cola1 sin modificar su contenido
+     * @precondicion ambas colas deben estar inicializadas
+     */
+    public void copiaCola(ColaPrioridad cola1, ColaPrioridad cola2) {
+
+        int valor;
+        int prioridad;
+
+        ColaPrioridad colaAux = new ColaPrioridad();
+        colaAux.inicializarCola();
+
+        colaToCola(cola1, colaAux);
+        
+        while (!colaAux.colaVacia()) {
+            valor = colaAux.primerValor();
+            prioridad = colaAux.primeraPrioridad();
+
+            colaAux.desacolar();
+            cola1.acolarPrioridad(valor, prioridad);
+            cola2.acolarPrioridad(valor, prioridad);
+        }
+    }
+
 }

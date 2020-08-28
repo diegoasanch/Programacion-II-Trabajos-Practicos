@@ -33,7 +33,7 @@ public interface ConjuntoTDA {
     /** @tarea Pertenece devuelve verdadero si el valor x recibido como parametro pertenece al conjunto
      * @Precondicion el conjunto debe estar incializado
      */
-    boolean pertenece();
+    boolean pertenece(int x);
     
 }
 

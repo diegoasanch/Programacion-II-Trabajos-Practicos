@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Ejercicio4",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio4",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Primes",
+            "request": "launch",
+            "mainClass": "Programas.Primes",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

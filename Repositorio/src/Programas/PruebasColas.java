@@ -1,6 +1,6 @@
 package Programas;
 
-import Implementaciones.ColaPrioridadDes;
+import Implementaciones.ColaPrioridad;
 
 import Metodos.MetodosColasPrioridad;
 
@@ -9,12 +9,16 @@ class PruebasColas {
 
         MetodosColasPrioridad metodos = new MetodosColasPrioridad();
 
-        ColaPrioridadDes cola1 = new ColaPrioridadDes();
+        ColaPrioridad cola1 = new ColaPrioridad();
+        ColaPrioridad cola2 = new ColaPrioridad();
         cola1.inicializarCola();
+        cola2.inicializarCola();
 
         metodos.cargaCola(cola1);
+        metodos.copiaCola(cola1, cola2);
 
         metodos.imprimeCola(cola1);
+        metodos.imprimeCola(cola2);
 
     }
 }
