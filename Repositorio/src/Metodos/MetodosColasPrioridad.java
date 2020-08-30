@@ -1,8 +1,10 @@
 package Metodos;
 
 import Interfaces.ColaPrioridadTDA;
-import Implementaciones.ColaPrioridad;
+
 import java.util.Scanner;
+
+import ImplementacionesEstaticas.ColaPrioridad;
 
 public class MetodosColasPrioridad {
 

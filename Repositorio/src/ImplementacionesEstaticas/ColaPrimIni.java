@@ -1,4 +1,4 @@
-package Implementaciones;
+package ImplementacionesEstaticas;
 import Interfaces.ColaTDA;
 
 public class ColaPrimIni implements ColaTDA {

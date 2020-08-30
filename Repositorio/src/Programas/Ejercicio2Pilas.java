@@ -1,63 +1,34 @@
 package Programas;
 
 import Interfaces.PilaTDA;
+import Interfaces.ColaTDA;
 import Metodos.MetodosPilas;
-import Implementaciones.PilaTopeIni;
 
-import java.util.Scanner;
+import Metodos.MetodosColas;
+import ImplementacionesDinamicas.PilaTopeFin;
+import ImplementacionesEstaticas.ColaCircular;
 
 class Ejercicio2Pilas {
     public static void main(String[] args) {
-        PilaTDA pila1 = new PilaTopeIni();
-        PilaTDA pila2 = new PilaTopeIni();
+        PilaTDA pila = new PilaTopeFin();
+        ColaTDA cola = new ColaCircular();
 
         // Cargamos los metodos de pilas
-        MetodosPilas pilas = new MetodosPilas();
+        MetodosPilas metodosPilas = new MetodosPilas();
+        MetodosColas metodosColas = new MetodosColas();
 
-        pila1.inicializarPila();
-        pila2.inicializarPila();
+        pila.inicializarPila();
+        cola.inicializarCola();
 
-        // Cargamos valores de prueba a pila1
-        pilas.cargaPila(pila1);
+        // Cargamos valores de prueba a pila
+        metodosPilas.cargaPila(pila);
 
-        System.out.println("Que desea hacer con la pila?");
-        System.out.println(" 1 - Transferir a otra pila.");
-        System.out.println(" 2 - Copiar la pila.");
-        System.out.println(" 3 - Invertir la pila.");
-        System.out.print("Ingrese una opcion: ");
-
-        Scanner teclado = new Scanner(System.in);
-        int opcion = teclado.nextInt();
-        teclado.close();
-
-        switch(opcion) {
-            case 1:
-                pilas.pilaToPila(pila1, pila2);
-                // Imprimimos los valores en la lista2
-                pilas.imprimePila(pila2);
-                break;
-
-            case 2:
-                pilas.copyPila(pila1, pila2);
-                // Imprimimos ambas pilas para ver si funciono
-                pilas.imprimePila(pila1);
-                pilas.imprimePila(pila2);
-                break;
-
-            case 3:
-                pilas.copyPila(pila1, pila2);
-                pilas.inviertePila(pila2);
-                System.out.println("Pila original");
-                pilas.imprimePila(pila1);
-                System.out.println("Pila Invertida");
-                pilas.imprimePila(pila2);
-                break;
-            
-                default:
-                System.out.println("Ingreso una opcion invalida!");
-        }
+        System.out.println("Pila");
+        metodosPilas.imprimePila(pila);
+        
+        System.out.println("Cola");
+        metodosPilas.pilaACola(pila, cola);
+        metodosColas.imprimeCola(cola);
 
     }
-
-
 }

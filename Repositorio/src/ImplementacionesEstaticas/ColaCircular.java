@@ -1,4 +1,4 @@
-package Implementaciones;
+package ImplementacionesEstaticas;
 
 import Interfaces.ColaTDA;
 

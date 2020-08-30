@@ -1,10 +1,12 @@
 package Metodos;
 
 import Interfaces.PilaTDA;
-import Implementaciones.PilaTopeIni;
+import Interfaces.ColaTDA;
+
 import java.util.Scanner;
 
-import Implementaciones.ColaCircular;
+import ImplementacionesEstaticas.ColaCircular;
+import ImplementacionesEstaticas.PilaTopeIni;
 
 
 public class MetodosPilas {
@@ -22,6 +24,14 @@ public class MetodosPilas {
             num = input.nextInt();
         }
         input.close();
+    }
+
+    /** @tarea pilaACola transfiere de una pila a una cola
+     * @precondicion la pila y la cola deben estar inicializadas
+     */
+    public void pilaACola(PilaTDA pila, ColaTDA cola) {
+        while (!pila.pilaVacia())
+            cola.acolar(pila.topeSacar());
     }
 
     // Imprime los valores de pila de manera NO destructiva

@@ -1,6 +1,6 @@
 package Programas;
 
-import Implementaciones.Conjunto;
+import ImplementacionesEstaticas.Conjunto;
 import Metodos.MetodosConjuntos;
 
 class Ejercicio4 {
@@ -14,16 +14,10 @@ class Ejercicio4 {
         Conjunto conjunto2 = new Conjunto();
         conjunto2.inicializarConjunto();
         
-        for (int i = 4; i < 16; i++) {
-            conjunto.agregar(i);
-        }
-        
-        for (int i = 0; i < 10; i++) {
-            conjunto2.agregar(i);
-        }
+        metodos.cargar(conjunto);
     
-        Conjunto difSim = metodos.diferenciaSimetrica(conjunto, conjunto2);
-        metodos.imprimir(difSim);
+
+        metodos.imprimir(conjunto);
 
     }
 }

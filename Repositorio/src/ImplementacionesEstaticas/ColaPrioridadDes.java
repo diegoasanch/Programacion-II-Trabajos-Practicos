@@ -2,7 +2,7 @@
  * Implementacion estatica de una cola con prioridad descendiente
  */
 
-package Implementaciones;
+package ImplementacionesEstaticas;
 
 import Interfaces.ColaPrioridadTDA;
 

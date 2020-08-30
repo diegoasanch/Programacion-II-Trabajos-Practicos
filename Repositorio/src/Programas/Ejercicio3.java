@@ -1,7 +1,7 @@
 package Programas;
+import ImplementacionesEstaticas.ColaCircular;
 import Interfaces.ColaTDA;
 import Metodos.MetodosColas;
-import Implementaciones.ColaCircular;
 
 class Ejercicio3 {
     public static void main(String[] args) {

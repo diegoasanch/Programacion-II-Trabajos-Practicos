@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Ejercicio2Pilas",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio2Pilas",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ejercicio4",
             "request": "launch",
             "mainClass": "Programas.Ejercicio4",

@@ -1,7 +1,7 @@
 package Programas;
 
+import ImplementacionesEstaticas.ColaCircular;
 import Interfaces.ColaTDA;
-import Implementaciones.ColaCircular;
 import Metodos.MetodosColas;
 
 class Ejercicio5Colas {

@@ -1,8 +1,10 @@
 package Metodos;
 
 import Interfaces.ColaTDA;
-import Implementaciones.ColaCircular;
+
 import java.util.Scanner;
+
+import ImplementacionesEstaticas.ColaCircular;
 
 public class MetodosColas {
 

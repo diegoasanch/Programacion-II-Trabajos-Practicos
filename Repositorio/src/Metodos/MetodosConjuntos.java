@@ -1,7 +1,8 @@
 package Metodos;
 
 import java.util.Scanner;
-import Implementaciones.Conjunto;
+
+import ImplementacionesEstaticas.Conjunto;
 import Interfaces.ConjuntoTDA;
 
 

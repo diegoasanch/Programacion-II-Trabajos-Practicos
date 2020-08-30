@@ -2,7 +2,7 @@
  * Implementacion estatica de un conjunto de numeros enteros
  */
 
-package Implementaciones;
+package ImplementacionesEstaticas;
 
 import Interfaces.ConjuntoTDA;
 import java.util.Random;

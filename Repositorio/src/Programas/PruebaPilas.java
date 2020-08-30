@@ -1,7 +1,7 @@
 package Programas;
 
+import ImplementacionesEstaticas.PilaTopeIni;
 import Metodos.MetodosPilas;
-import Implementaciones.PilaTopeIni;
 
 class PruebaPilas {
     public static void main(String[] args) {
