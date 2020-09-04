@@ -5,6 +5,7 @@ import Interfaces.ColaTDA;
 import java.util.Scanner;
 
 import ImplementacionesEstaticas.ColaCircular;
+import ImplementacionesDinamicas.ColaPrimIni;
 
 public class MetodosColas {
 
@@ -194,5 +195,32 @@ public class MetodosColas {
             promedio = 0;
         
         return promedio;
-    }       
+    }
+
+    // Retorna arreglo de dos colas con la primera y segunda mitad (en orden) de la cola recibida
+    public ColaTDA[] colaMitades(ColaTDA cola) {
+        ColaTDA mitad1 = new ColaPrimIni();
+        ColaTDA mitad2 = new ColaPrimIni();
+        mitad1.inicializarCola();
+        mitad2.inicializarCola();
+
+        final int mitad = (longitud(cola) / 2);
+
+        // Pasamos la primera mitad a mitad1
+        for (int i =0; i < mitad; i++) {
+            mitad1.acolar(cola.primero());
+            cola.desacolar();
+        }
+        // Segunda mitad a mitad2
+        while (!cola.colaVacia()) {
+            mitad2.acolar(cola.primero());
+            cola.desacolar();
+        }
+
+        ColaTDA[] contenedor = new ColaTDA[2];
+        contenedor[0] = mitad1;
+        contenedor[1] = mitad2;
+        
+        return contenedor;
+    }
 }

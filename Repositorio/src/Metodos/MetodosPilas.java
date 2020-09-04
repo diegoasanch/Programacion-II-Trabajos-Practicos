@@ -6,12 +6,12 @@ import Interfaces.ColaTDA;
 import java.util.Scanner;
 
 import ImplementacionesEstaticas.ColaCircular;
-import ImplementacionesEstaticas.PilaTopeIni;
-
+import ImplementacionesDinamicas.PilaTopeIni;
+import ImplementacionesDinamicas.Conjunto;
 
 public class MetodosPilas {
 
-    // Cargar los valores por tec;ado en una pila hasta que se ingrese -1
+    // Cargar los valores por teclado en una pila hasta que se ingrese -1
     public void cargaPila(PilaTDA pila) {
         Scanner input = new Scanner(System.in);
         int num;
@@ -176,4 +176,28 @@ public class MetodosPilas {
         return iguales;
     }
 
+    /** Determina si pila1 es parte de pila2 (respentado el orden y secuencia)
+     * @Precondicion ambas pilas deben estar inicializadas
+    */
+    public boolean esParteDe(PilaTDA pila1, PilaTDA pila2) { return true; }
+
+    // Remueve los items repetidos de una pila, preserva la posicion en la que aparecio por primera vez
+    public void eliminaRepetidos(PilaTDA pila) {
+        Conjunto agregados = new Conjunto();
+        agregados.inicializarConjunto();
+        PilaTDA pilaAux = new PilaTopeIni();
+        pilaAux.inicializarPila();
+
+        while (!pila.pilaVacia()) {
+            int valor = pila.topeSacar();
+
+            if (!agregados.pertenece(valor)) {
+                agregados.agregar(valor);
+                pilaAux.apilar(valor);
+            }
+        }
+        while (!pilaAux.pilaVacia()) {
+            pila.apilar(pilaAux.topeSacar());
+        }
+    }
 }

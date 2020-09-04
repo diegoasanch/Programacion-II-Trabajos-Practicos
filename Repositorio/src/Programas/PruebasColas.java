@@ -1,6 +1,6 @@
 package Programas;
 
-import ImplementacionesEstaticas.ColaPrioridad;
+import ImplementacionesDinamicas.ColaPrioridad;
 import Metodos.MetodosColasPrioridad;
 
 class PruebasColas {

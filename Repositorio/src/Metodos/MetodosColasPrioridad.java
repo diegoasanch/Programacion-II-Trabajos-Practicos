@@ -76,12 +76,12 @@ public class MetodosColasPrioridad {
     /** @tarea copiaCola copia a cola2 el contenido de cola1 sin modificar su contenido
      * @precondicion ambas colas deben estar inicializadas
      */
-    public void copiaCola(ColaPrioridad cola1, ColaPrioridad cola2) {
+    public void copiaCola(ColaPrioridadTDA cola1, ColaPrioridadTDA cola2) {
 
         int valor;
         int prioridad;
 
-        ColaPrioridad colaAux = new ColaPrioridad();
+        ColaPrioridadTDA colaAux = new ColaPrioridad();
         colaAux.inicializarCola();
 
         colaToCola(cola1, colaAux);

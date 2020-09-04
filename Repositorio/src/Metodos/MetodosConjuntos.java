@@ -26,7 +26,7 @@ public class MetodosConjuntos {
             System.out.print("Ingrese un numero: ");
             num = teclado.nextInt();
         }
-        teclado.close();
+        // teclado.close();
     }
     
     // Imprime de manera no destructiva un conjunto de numeros enteros
@@ -174,5 +174,4 @@ public class MetodosConjuntos {
         }
         return estaIncluido;
     }
-
 }

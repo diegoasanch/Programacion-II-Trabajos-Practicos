@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - PruebaPilas",
+            "request": "launch",
+            "mainClass": "Programas.PruebaPilas",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PruebasColas",
+            "request": "launch",
+            "mainClass": "Programas.PruebasColas",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ejercicio5Colas",
+            "request": "launch",
+            "mainClass": "Programas.Ejercicio5Colas",
+            "projectName": "Repositorio_a1fdd464"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ejercicio2Pilas",
             "request": "launch",
             "mainClass": "Programas.Ejercicio2Pilas",
