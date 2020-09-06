@@ -31,7 +31,7 @@ public class MetodosConjuntos {
     
     // Imprime de manera no destructiva un conjunto de numeros enteros
     public void imprimir(ConjuntoTDA conjunto) {
-        Conjunto conjAux = new Conjunto();
+        ConjuntoTDA conjAux = new Conjunto();
         conjAux.inicializarConjunto();
 
         while (! conjunto.conjuntoVacio()) {
@@ -56,11 +56,11 @@ public class MetodosConjuntos {
     }
 
     // Devuelve una copia del conjunto recibido sin modificar el original
-    public Conjunto copiaConjunto(ConjuntoTDA conj) {
-        Conjunto conjAux = new Conjunto();
+    public ConjuntoTDA copiaConjunto(ConjuntoTDA conj) {
+        ConjuntoTDA conjAux = new Conjunto();
         conjAux.inicializarConjunto();
         
-        Conjunto conj2 = new Conjunto();
+        ConjuntoTDA conj2 = new Conjunto();
         conj2.inicializarConjunto();
 
         conjToConj(conj, conjAux);
@@ -78,8 +78,8 @@ public class MetodosConjuntos {
     // Verifica si los elementos de dos conjuntos son iguales
     public boolean sonIguales(ConjuntoTDA conj1, ConjuntoTDA conj2) {
         // Creamos copias de los conjuntos para no destruirlos
-        Conjunto conj1C = copiaConjunto(conj1);
-        Conjunto conj2C = copiaConjunto(conj2);
+        ConjuntoTDA conj1C = copiaConjunto(conj1);
+        ConjuntoTDA conj2C = copiaConjunto(conj2);
 
         boolean iguales = true;
 
@@ -100,11 +100,11 @@ public class MetodosConjuntos {
     }
 
     // Retorna un conjunto resultante de la union de los dos conjuntos recibidos
-    public Conjunto union(Conjunto conj1, Conjunto conj2) {
+    public ConjuntoTDA union(ConjuntoTDA conj1, ConjuntoTDA conj2) {
         
         // Empezamos con una copia de conj1 y a este le agregamos los de conj2 que no pertenecen a este
-        Conjunto conjUnion = copiaConjunto(conj1);
-        Conjunto conj2Copia = copiaConjunto(conj2);
+        ConjuntoTDA conjUnion = copiaConjunto(conj1);
+        ConjuntoTDA conj2Copia = copiaConjunto(conj2);
 
         while (!conj2Copia.conjuntoVacio()) {
             int valor = conj2Copia.obtener();
@@ -117,14 +117,14 @@ public class MetodosConjuntos {
     }
 
     // Retorna un conjunto resultante de la interseccion de los dos conjuntos recibidos
-    public Conjunto interseccion(Conjunto conj1, Conjunto conj2) {
+    public ConjuntoTDA interseccion(ConjuntoTDA conj1, ConjuntoTDA conj2) {
     
         // Empezamos con una copia de conj1 y conj2 para no modificarlos
-        Conjunto conjInter = new Conjunto();
+        ConjuntoTDA conjInter = new Conjunto();
         conjInter.inicializarConjunto();
 
-        Conjunto conj1Copia = copiaConjunto(conj1);
-        Conjunto conj2Copia = copiaConjunto(conj2);
+        ConjuntoTDA conj1Copia = copiaConjunto(conj1);
+        ConjuntoTDA conj2Copia = copiaConjunto(conj2);
 
         while (!conj1Copia.conjuntoVacio()) {
             int valor = conj1Copia.obtener();
@@ -139,11 +139,11 @@ public class MetodosConjuntos {
     }
 
     // Retorna un conjunto con la diferencia de conj1 con conj2
-    public Conjunto diferencia(Conjunto conj1, Conjunto conj2) {
-        Conjunto conjDif = new Conjunto();
+    public ConjuntoTDA diferencia(ConjuntoTDA conj1, ConjuntoTDA conj2) {
+        ConjuntoTDA conjDif = new Conjunto();
         conjDif.inicializarConjunto();
 
-        Conjunto conj1Copia = copiaConjunto(conj1);
+        ConjuntoTDA conj1Copia = copiaConjunto(conj1);
 
         while (!conj1Copia.conjuntoVacio()) {
             int valor = conj1Copia.obtener();
@@ -156,14 +156,14 @@ public class MetodosConjuntos {
     }
 
     // retorna conjunto con la diferencia simetrica entre conj1 y conj2
-    public Conjunto diferenciaSimetrica(Conjunto conjunto1, Conjunto conjunto2) {
+    public ConjuntoTDA diferenciaSimetrica(ConjuntoTDA conjunto1, ConjuntoTDA conjunto2) {
         return union(diferencia(conjunto1, conjunto2), diferencia(conjunto2, conjunto1));
     }
 
     // Indica si el conj1 esta completamente incluido en conj2
-    public boolean incluido(Conjunto conj1, Conjunto conj2) {
+    public boolean incluido(ConjuntoTDA conj1, ConjuntoTDA conj2) {
 
-        Conjunto conj1Copia = copiaConjunto(conj1);
+        ConjuntoTDA conj1Copia = copiaConjunto(conj1);
         boolean estaIncluido = true;
 
         while (estaIncluido && !conj1Copia.conjuntoVacio()) {

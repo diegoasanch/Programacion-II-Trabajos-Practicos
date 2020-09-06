@@ -12,14 +12,7 @@ class Ejercicio5Colas {
         MetodosColas metodos = new MetodosColas();
         metodos.cargaCola(cola);
 
-        ColaTDA[] contenedor = metodos.colaMitades(cola);
-
-        System.out.println("Cola original");
-        metodos.imprimeCola(cola);
-        
-        for (int i = 0; i < 2; i++) {
-            System.out.println("Mitad " + (i + 1));
-            metodos.imprimeCola(contenedor[i]);
-        }
+        int masLarga = metodos.secuenciaMasLarga(cola);
+        System.out.println("La secuencia mas larga es de " + masLarga + " elementos");
     }
 }

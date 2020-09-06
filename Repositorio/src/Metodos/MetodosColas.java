@@ -223,4 +223,32 @@ public class MetodosColas {
         
         return contenedor;
     }
+
+    /** Dada una cola con secuencias de números separadas por el valor 0.
+     * Determina la cantidad de elementos de la secuencia más larga.
+     */
+    public int secuenciaMasLarga(ColaTDA cola) {
+        ColaTDA colaAux = new ColaPrimIni();
+        colaAux.inicializarCola();
+
+        int masLarga = 0;
+        int actual = 0;
+        int num;
+
+        while (!cola.colaVacia()) {
+            num = cola.primero();
+            cola.desacolar();
+
+            if (num != 0)
+                actual ++;
+            else {
+                if (actual > masLarga)
+                    masLarga = actual;
+                actual = 0;
+            }
+        }
+        // Para analizar el resultado del ultimo ciclo
+        return Math.max(masLarga, actual);
+    }
+    
 }
