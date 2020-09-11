@@ -26,7 +26,6 @@ public class MetodosConjuntos {
             System.out.print("Ingrese un numero: ");
             num = teclado.nextInt();
         }
-        // teclado.close();
     }
     
     // Imprime de manera no destructiva un conjunto de numeros enteros
@@ -131,7 +130,6 @@ public class MetodosConjuntos {
             conj1Copia.sacar(valor);
 
             if (conj2Copia.pertenece(valor)) {
-                conj2Copia.sacar(valor);
                 conjInter.agregar(valor);
             }
         }

@@ -29,7 +29,6 @@ public class MetodosColasPrioridad {
             System.out.print("Ingrese un valor: ");
             valor = teclado.nextInt();
         }
-        // teclado.close();
     }
 
     /** @tarea Imprime cola imprime los pares de (prioridad, valor) de una 
@@ -170,4 +169,12 @@ public class MetodosColasPrioridad {
         }
         return nuevaCola;
     }
+
+    /** A partir de dos colas con prioridad generar una tercera cola que
+     * contenga todos los elementos de cada una de las colas. Si hubiese
+     * elementos repetidos el elemento que tiene mayor prioridad es el de
+     * la primera cola */
+    // public ColaPrioridadTDA mergeColas(ColaPrioridadTDA cola1, ColaPrioridadTDA cola2) {
+    //     // will fill it soon
+    // }
 }
