@@ -34,7 +34,7 @@ public class ColaPrimIni implements ColaTDA {
         }
         else {
             inicio = inicio.sig;
-        }    
+        }
     }
 
     public int primero() {
@@ -43,5 +43,5 @@ public class ColaPrimIni implements ColaTDA {
 
     public boolean colaVacia() {
         return inicio == null;
-    }    
+    }
 }
