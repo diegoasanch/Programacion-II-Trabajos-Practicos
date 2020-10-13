@@ -1,11 +1,13 @@
 package Metodos;
 
 import Interfaces.ColaTDA;
+import Interfaces.ConjuntoTDA;
 
 import java.util.Scanner;
 
 import ImplementacionesEstaticas.ColaCircular;
 import ImplementacionesDinamicas.ColaPrimIni;
+import ImplementacionesDinamicas.Conjunto;
 
 public class MetodosColas {
 
@@ -13,13 +15,19 @@ public class MetodosColas {
      * Finaliza la carga al ingresar -1
      */
     public void cargaCola(ColaTDA cola) {
+        cargaColaCust(cola, -1);
+    }
+    /** @tarea cargaCola carga valores enteros en una cola
+     * Finaliza la carga al ingresar el enetero recibido como terminador
+     */
+    public void cargaColaCust(ColaTDA cola, int terminador) {
         Scanner teclado = new Scanner(System.in);
         int numero;
 
         System.out.print("Ingrese un numero: ");
         numero = teclado.nextInt();
 
-        while (numero != -1) {
+        while (numero != terminador) {
             cola.acolar(numero);
             System.out.print("Ingrese un numero: ");
             numero = teclado.nextInt();
@@ -89,7 +97,7 @@ public class MetodosColas {
     // Copia los elementos de cola1 a cola2
     public void copiaCola(ColaTDA cola1, ColaTDA cola2) {
         // Creamos una cola auxiliar
-        ColaTDA colaAux = new ColaCircular();
+        ColaTDA colaAux = new ColaPrimIni();
         colaAux.inicializarCola();
 
         // Pasamos todos los valores a colaAux
@@ -107,6 +115,16 @@ public class MetodosColas {
             cola1.acolar(valor);
             cola2.acolar(valor);
         }
+    }
+    // Retorna ColaTDA con los elementos de Cola 1 sin destruirla
+    public ColaTDA copiaColaCompleta(ColaTDA cola) {
+        
+        // Creamos una cola auxiliar
+        ColaTDA nueva = new ColaPrimIni();
+        nueva.inicializarCola();
+
+        copiaCola(cola, nueva);
+        return nueva;
     }
 
 
@@ -251,4 +269,67 @@ public class MetodosColas {
         return Math.max(masLarga, actual);
     }
     
+        /** @Tarea extrae la subcola de indice "indice" dentro de "cola"
+     * @param cola cola original
+     * @param indice indice de la subcola dentro de la cola original
+     * @param sep numero separador de las subcolas colas
+     */
+    public ColaTDA extraeSubCola(ColaTDA cola, int indice, int sep) {
+        
+        ColaTDA subCola = new ColaPrimIni();
+        subCola.inicializarCola();
+
+        ColaTDA aux = copiaColaCompleta(cola);
+        int i = 0;
+        
+        while (!aux.colaVacia()) {
+            
+            if (aux.primero() == sep)
+                i++;
+            else if (i == indice)
+                subCola.acolar(aux.primero());
+            aux.desacolar();
+        }
+        return subCola;
+    }
+        /** @Tarea excluye la subcola de indice "indice" dentro de "cola"
+     * @param cola cola original
+     * @param indice indice de la subcola e exluir dentro de la cola original
+     * @param sep numero separador de las subcolas colas
+     */
+    public ColaTDA excluyeSubCola(ColaTDA cola, int indice, int sep) {
+        
+        ColaTDA subCola = new ColaPrimIni();
+        subCola.inicializarCola();
+
+        ColaTDA aux = copiaColaCompleta(cola);
+        int i = 0;
+        
+        // Llegamos a la subcola del indice que buscamos 
+        while (!aux.colaVacia()) {
+
+            if (aux.primero() == sep)
+                i++;
+            else if (i != indice)
+                subCola.acolar(aux.primero());
+            aux.desacolar();
+        }
+        return subCola;
+    }
+
+    // Retorna un conjuntoTDA con los valores de la cola recibida
+    public ConjuntoTDA colaToConj(ColaTDA cola) {
+        ColaTDA aux = copiaColaCompleta(cola);
+        ConjuntoTDA valores = new Conjunto();
+        valores.inicializarConjunto();
+
+        while (!aux.colaVacia()) {
+            if (!valores.pertenece(aux.primero()))
+                valores.agregar(aux.primero());
+            
+            aux.desacolar();
+        }
+        return valores;
+    }
+
 }
