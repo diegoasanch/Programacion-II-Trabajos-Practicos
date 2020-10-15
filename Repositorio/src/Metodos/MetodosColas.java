@@ -332,4 +332,28 @@ public class MetodosColas {
         return valores;
     }
 
+    /**
+     * @tarea ColaOrdenada determina si una cola recibida esta ordenada de
+     * forma ascendente
+     * @param cola
+     * @return Resultado de cola ordenada (verdadero o falso)
+     */
+    public boolean ColaOrdenada(ColaTDA cola) {
+        
+        boolean ord = true;
+        int prev = -1;
+
+        // Primer valor sera el previo
+        if (!cola.colaVacia()) {
+            prev = cola.primero();
+            cola.desacolar();
+        }
+
+        while (ord && !cola.colaVacia()) {
+            ord = prev <= cola.primero();
+            prev = cola.primero();
+            cola.desacolar();
+        }
+        return ord;
+    }
 }
