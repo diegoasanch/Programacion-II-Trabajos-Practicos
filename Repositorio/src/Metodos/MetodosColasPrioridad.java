@@ -175,6 +175,6 @@ public class MetodosColasPrioridad {
      * elementos repetidos el elemento que tiene mayor prioridad es el de
      * la primera cola */
     // public ColaPrioridadTDA mergeColas(ColaPrioridadTDA cola1, ColaPrioridadTDA cola2) {
-    //     // will fill it soon
+    //     // TODO:  will fill it soon
     // }
 }

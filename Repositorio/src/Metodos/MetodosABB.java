@@ -110,7 +110,7 @@ public class MetodosABB {
             int altIzq = altura(arbol.hijoIzq());
             int altDer = altura(arbol.hijoDer());
 
-            return (altIzq > altDer ? altIzq : altDer) + 1;
+            return ( (altIzq > altDer) ? altIzq : altDer ) + 1;
         }
         return 0;
     }
